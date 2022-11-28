@@ -11,7 +11,7 @@ console.log(numOrStr)
     console.log('OK!')
 }*/
 
-switch (numOrStr) {
+switch (numOrStr && numOrStr.trim() && isNaN(+numOrStr)) {
     case null:
         console.log('ви скасували');
         break;
@@ -19,10 +19,9 @@ switch (numOrStr) {
     case ' ':
         console.log('Empty String');
         break;
-    case isNaN(+numOrStr):
+    case true:
         console.log(' number is Ba_NaN');
         break;
-        //Цей кейс не працює і я не розумію чому. Будь ласка, коли будеш перевіряти цю домашку, поясни.
     default:
         console.log('OK!');
 }
